@@ -12,10 +12,10 @@ export async function POST(req) {
       console.log("user.created");
     }
     if (evt.type === "user.deleted") {
-      console.log("user.created");
+      console.log("user.deleted");
     }
     if (evt.type === "user.updated") {
-      console.log("user.created");
+      console.log("user.updated");
     }
     return new Response("Webhook received", { status: 200 });
   } catch (err) {
