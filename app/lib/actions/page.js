@@ -1,5 +1,5 @@
-import { dbConnect } from "@/lib/mongodb/mongoose";
-import User from "@/lib/models/User";
+import { dbConnect } from "../mongodb/mongoose";
+import User from "../models/User";
 
 export const createOrUpdateUser = async (
   id,
