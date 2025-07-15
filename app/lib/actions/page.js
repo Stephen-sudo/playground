@@ -1,4 +1,4 @@
-import { dbconnect } from "@/lib/mongodb";
+import dbConnect from "@/lib/mongodb/mongoose";
 import User from "@/lib/models/User";
 
 export const createOrUpdateUser = async (
@@ -9,7 +9,7 @@ export const createOrUpdateUser = async (
   email_addresses
 ) => {
   try {
-    await dbconnect();
+    await dbConnect();
 
     // Check if user already exists
     const user = await User.findOneAndUpdate(
@@ -33,9 +33,9 @@ export const createOrUpdateUser = async (
   }
 };
 
-export default deleteUser = async (id) => {
+export const deleteUser = async (id) => {
   try {
-    await dbconnect();
+    await dbConnect();
 
     // Delete user by clerkId
     const deletedUser = await User.findOneAndDelete({ clerkId: id });
