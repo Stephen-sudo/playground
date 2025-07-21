@@ -3,9 +3,9 @@
 import { FaSearch } from "react-icons/fa";
 import Link from "next/link";
 import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
-
 import { useEffect, useState } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
+
 export default function Header() {
   const searchParams = useSearchParams();
   const router = useRouter();
