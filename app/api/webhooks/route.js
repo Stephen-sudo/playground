@@ -11,11 +11,11 @@ export async function POST(req) {
 
     // Do something with payload
     // For this guide, log payload to console
-    const { id } = evt.data;
-    const eventType = evt.type;
+    const { id } = evt?.data;
+    const eventType = evt?.type;
 
     if (eventType === "user.created" || eventType === "user.updated") {
-      const { first_name, last_name, email_addresses, image_url } = evt.data;
+      const { first_name, last_name, email_addresses, image_url } = evt?.data;
 
       try {
         const user = await createOrUpdateUser({
